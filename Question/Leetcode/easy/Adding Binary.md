@@ -7,7 +7,7 @@ tags:
     - bits
 ---
 ---
-### [LeetCode Link](https://leetcode.com/problems/add-binary/)
+###### [LeetCode Link](https://leetcode.com/problems/add-binary/)
 ---
 
 ---
@@ -281,3 +281,6 @@ not confusing any more
 # Tips & Tricks
 ---
 the key to this problem is figuring out how to carry a value over.
+
+---
+# Foot Notes

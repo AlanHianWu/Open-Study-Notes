@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Question/Leetcode/easy/Adding Binary.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f4679f73b206b375",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Question/Leetcode/medium/Add One Row to Tree.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2706e37e87df7572",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Question/Leetcode/hard/Maximum Frequency Stack.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "eb4f4c9160fe3c1b",
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Question/Leetcode/hard/Maximum Frequency Stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Question/Leetcode/hard/Maximum Frequency Stack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Question/Leetcode/hard/Maximum Frequency Stack.md"
               }
             }
           }
@@ -136,9 +161,12 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e4e2d54c5a0cee0f",
+  "active": "2706e37e87df7572",
   "lastOpenFiles": [
+    "Question/Leetcode/medium/Add One Row to Tree.md",
     "Question/Leetcode/easy/Adding Binary.md",
+    "Question/Leetcode/hard/Maximum Frequency Stack.md",
+    "README.md",
     "assets/images/Pasted image 20220921145921.png",
     "Pasted image 20220921145921.png.md",
     "Untitled.md"
