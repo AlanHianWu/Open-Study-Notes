@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5e59665247264804",
+        "id": "7c8d95c4d854027e",
         "type": "tabs",
         "children": [
           {
-            "id": "e36cca266b466032",
+            "id": "e4e2d54c5a0cee0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Question/Leetcode/easy/Adding Binary.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "Question/Leetcode/easy/Adding Binary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "Question/Leetcode/easy/Adding Binary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "Question/Leetcode/easy/Adding Binary.md"
               }
             }
           }
@@ -136,6 +136,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e36cca266b466032",
-  "lastOpenFiles": []
+  "active": "e4e2d54c5a0cee0f",
+  "lastOpenFiles": [
+    "assets/images/Pasted image 20220921145921.png",
+    "Pasted image 20220921145921.png.md",
+    "Question/Leetcode/easy/Adding Binary.md",
+    "Untitled.md"
+  ]
 }
