@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Question/Leetcode/easy/Adding Binary.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Question/Leetcode/easy/Adding Binary.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Question/Leetcode/easy/Adding Binary.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Question/Leetcode/easy/Adding Binary.md"
+                "file": "README.md"
               }
             }
           }
@@ -138,9 +138,9 @@
   },
   "active": "e4e2d54c5a0cee0f",
   "lastOpenFiles": [
+    "Question/Leetcode/easy/Adding Binary.md",
     "assets/images/Pasted image 20220921145921.png",
     "Pasted image 20220921145921.png.md",
-    "Question/Leetcode/easy/Adding Binary.md",
     "Untitled.md"
   ]
 }

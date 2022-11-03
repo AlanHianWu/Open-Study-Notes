@@ -2,11 +2,17 @@
 tags:
     - question
     - leetcode
+    - python
     - easy
     - bits
 ---
+---
+### [LeetCode Link](https://leetcode.com/problems/add-binary/)
+---
 
+---
 # My Notes
+---
 
 This question is similar to [[Plus One]]
 
@@ -45,14 +51,6 @@ class Solution:
         print('ans ', ans)
 ```
 
-ditching this for now tbh. revisit later
-
-### [[2022-10-02]] 
-this is later, yep still to confusing
-
-
-### [[2022-10-06]]
-not confusing any more
 ![[Pasted image 20221006005249.png]]
 ``` python
 class Solution:
@@ -98,9 +96,9 @@ class Solution:
                 
 ```
 
-not hearing back from amazon, really think I botched the OA2 now, depressed.
-
+---
 # Question
+---
 Given two binary strings `a` and `b`, return _their sum as a binary string_.
 
 >**Example 1:**
@@ -116,17 +114,13 @@ Given two binary strings `a` and `b`, return _their sum as a binary string_.
 >-   `a` and `b` consist only of `'0'` or `'1'` characters.
 >-   Each string does not contain leading zeros except for the zero itself.
 
-
-
+---
 # Offical Solution
+---
 #### Overview
-
 There is a simple way using built-in functions:
-
 -   Convert a and b into integers.
-    
 -   Compute the sum.
-    
 -   Convert the sum back into binary form.
 
 ``` python
@@ -135,7 +129,7 @@ class Solution:
         return '{0:b}'.format(int(a, 2) + int(b, 2))
 ```
 
-The overall algorithm has \mathcal{O}(N + M)O(N+M) time complexity and has two drawbacks which could be used against you during the interview.
+The overall algorithm has $\mathcal{O}(N + M)O(N+M)$ time complexity and has two drawbacks which could be used against you during the interview.
 
 > 1 . In Java this approach is limited by the length of the input strings a and b. Once the string is long enough, the result of conversion into integers will not fit into Integer, Long or BigInteger:
 
@@ -158,7 +152,6 @@ One could use Bit Manipulation approach to speed up the solution.
 #### Approach 1: Bit-by-Bit Computation
 
 **Algorithm**
-
 That's a good old classical algorithm, and there is no conversion from binary string to decimal and back here. Let's consider the numbers bit by bit starting from the lowest one and compute the carry this bit will add.
 
 Start from carry = 0. If number a has 1-bit in this lowest bit, add 1 to the carry. The same for number b: if number b has 1-bit in the lowest bit, add 1 to the carry. At this point the carry for the lowest bit could be equal to (00)_2(00)2​, (01)_2(01)2​, or (10)_2(10)2​.
@@ -168,7 +161,6 @@ Now append the lowest bit of the carry to the answer, and move the highest bit o
 Repeat the same steps again, and again, till all bits in a and b are used up. If there is still nonzero carry to add, add it. Now reverse the answer string and the job is done.
 
 **Implementation**
-
 ``` python
 class Solution:
     def addBinary(self, a, b) -> str:
@@ -198,12 +190,9 @@ class Solution:
 ```
 
 **Complexity Analysis**
+-   Time complexity: $\mathcal{O}(\max(N, M))O(max(N,M))$, where NN and MM are lengths of the input strings a and b.
 
--   Time complexity: \mathcal{O}(\max(N, M))O(max(N,M)), where NN and MM are lengths of the input strings a and b.
-    
--   Space complexity: \mathcal{O}(\max(N, M))O(max(N,M)) to keep the answer.  
-      
-    
+-   Space complexity: $\mathcal{O}(\max(N, M))O(max(N,M))$ to keep the answer.  
 
 ---
 
@@ -268,14 +257,27 @@ class Solution:
 
 **Performance Discussion**
 
-Here we deal with input numbers which are greater than 2^{100}2100. That forces to use slow [BigInteger](https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html) in Java, and hence the performance gain will be present for the Python solution only. Provided here Java solution could make its best with Integers or Longs, but not with BigIntegers.
+Here we deal with input numbers which are greater than $2^{100}2100$. That forces to use slow [BigInteger](https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html) in Java, and hence the performance gain will be present for the Python solution only. Provided here Java solution could make its best with Integers or Longs, but not with BigIntegers.
 
 **Complexity Analysis**
 
--   Time complexity : \mathcal{O}(N + M)O(N+M), where NN and MM are lengths of the input strings a and b.
+-   Time complexity : $\mathcal{O}(N + M)O(N+M)$, where NN and MM are lengths of the input strings a and b.
     
--   Space complexity : \mathcal{O}(\max(N, M))O(max(N,M)) to keep the answer.
+-   Space complexity : $\mathcal{O}(\max(N, M))O(max(N,M))$ to keep the answer.
 
-
+---
 # Time Line
-2022-09-21
+---
+### [[2022-09-21]]
+ditching this for now tbh. revisit later
+
+### [[2022-10-02]] 
+this is later, yep still to confusing
+
+### [[2022-10-06]]
+not confusing any more
+
+---
+# Tips & Tricks
+---
+the key to this problem is figuring out how to carry a value over.
