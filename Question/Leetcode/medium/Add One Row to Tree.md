@@ -3,8 +3,9 @@ tags:
     - medium
     - binary_tree
 ---
-
-# [[2022-10-06]]
+---
+###### [LeetCode Link](https://leetcode.com/problems/add-one-row-to-tree/)
+---
 
 # My Notes
 seems to just be add node at depth x, but I'll have to do it for left and right.
@@ -200,7 +201,9 @@ cool did it
 ![[Pasted image 20221012115555.png]]
 very slow uhh.
 
+---
 # Question
+---
 Given the `root` of a binary tree and two integers `val` and `depth`, add a row of nodes with value `val` at the given depth `depth`.
 
 Note that the `root` node is at depth `1`.
@@ -212,34 +215,27 @@ The adding rule is:
 -   `cur`'s original right subtree should be the right subtree of the new right subtree root.
 -   If `depth == 1` that means there is no depth `depth - 1` at all, then create a tree node with value `val` as the new root of the whole original tree, and the original tree is the new root's left subtree.
 
-**Example 1:**
-
-![](https://assets.leetcode.com/uploads/2021/03/15/addrow-tree.jpg)
-
+>**Example 1:**
+>![](https://assets.leetcode.com/uploads/2021/03/15/addrow-tree.jpg)
 **Input:** root = [4,2,6,3,1,5], val = 1, depth = 2
 **Output:** [4,1,1,2,null,null,6,3,1,5]
 
-**Example 2:**
-
-![](https://assets.leetcode.com/uploads/2021/03/11/add2-tree.jpg)
-
+>**Example 2:**
+>![](https://assets.leetcode.com/uploads/2021/03/11/add2-tree.jpg)
 **Input:** root = [4,2,null,3,1], val = 1, depth = 3
 **Output:** [4,2,null,1,1,3,null,null,1]
 
-**Constraints:**
+>**Constraints:**
+>-   The number of nodes in the tree is in the range `[1, 104]`.
+>-   The depth of the tree is in the range `[1, 104]`.
+>-   `-100 <= Node.val <= 100`
+>-   `-105 <= val <= 105`
+>-   `1 <= depth <= the depth of tree + 1`
 
--   The number of nodes in the tree is in the range `[1, 104]`.
--   The depth of the tree is in the range `[1, 104]`.
--   `-100 <= Node.val <= 100`
--   `-105 <= val <= 105`
--   `1 <= depth <= the depth of tree + 1`
-
-
-
-
-
-
+---
 # Offical Solution
+---
+
 #### Approach #1 Using Recursion(DFS) [Accepted]
 
 If the given depth dd happens to be equal to 1, we can directly put the whole current tree as a left child of the newly added node. Otherwise, we need to put the new node at appropriate levels.
@@ -293,32 +289,24 @@ public class Solution {
 ```
 
 **Complexity Analysis**
+-   Time complexity : $O(n)O(n)$. A total of nn nodes of the given tree will be considered.
 
--   Time complexity : O(n)O(n). A total of nn nodes of the given tree will be considered.
-    
--   Space complexity : O(n)O(n). The depth of the recursion tree can go upto nn in the worst case(skewed tree).
-    
+-   Space complexity : $O(n)O(n)$. The depth of the recursion tree can go upto nn in the worst case(skewed tree).
 
 ---
 
 #### Approach #2 Using stack(DFS) [Accepted]
 
 **Algorithm**
-
 We can do the same task as discussed in the last approach by making use of a stackstack as well. But, we need to make use of a new data structure, NodeNode here, to keep a track of the depth of the current node along with its value.
 
 We start by pushing the root NodeNode onto the stackstack. Then, at every step we do as follows:
 
 -   Pop an element from the stackstack.
-    
 -   For every Node popped, check if its depth corresponds to one prior to the depth at which the new node needs to be inserted.
-    
 -   If yes, insert the new nodes appropriately as in the last approach.
-    
 -   If no, we push both the left and the right child Node(value+depth) of the current node onto the stackstack.
-    
 -   Continue the popping and pushing process till the stackstack becomes empty.
-    
 
 ``` java
 /**
@@ -372,18 +360,12 @@ public class Solution {
 ```
 
 **Complexity Analysis**
-
--   Time complexity : O(n)O(n). A total of nn nodes of the given tree will be considered.
-    
--   Space complexity : O(n)O(n). The depth of the stackstack can go upto nn in the worst case(skewed tree).
-    
+-   Time complexity : $O(n)O(n)$. A total of nn nodes of the given tree will be considered.
+-   Space complexity : $O(n)O(n)$. The depth of the stackstack can go upto nn in the worst case(skewed tree).
 
 ---
-
 #### Approach #3 Using queue(BFS) [Accepted]
-
 **Algorithm**
-
 The idea of traversal in the last approach is similar to Depth First Search. In that case, we need to traverse through all the nodes of the given tree in the order of branches. Firstly we explored one branch to as much depth as possible and then continued with the other ones.
 
 If, instead, we go for Breadth First Search, along with keeping track of the depth of the nodes being considered at any moment during the Breadth First Search, we can stop the search process as soon as all the nodes at the depth d - 1d−1 have been considered once.
@@ -391,15 +373,10 @@ If, instead, we go for Breadth First Search, along with keeping track of the dep
 To implement this BFS, we make use of a queuequeue. We start off by pushing the root node of the given tree at the back of the queuequeue and with the depth of the current level set as 1. Then, at every step, we do the following:
 
 -   Remove an element from the front of the queuequeue and add all its children to the back of another temporary queue, temptemp.
-    
 -   Keep on adding the elements to the back of the temptemp till queuequeue becomes empty. (Once queuequeue becomes empty, it indicates that all the nodes at the current level have been considered and now temptemp contains all the nodes lying at the next level).
-    
 -   Reinitialize queuequeue with its value as temptemp. Update the current value of the depthdepth to reflect the level of nodes currently being considered.
-    
 -   Repeat the process till we reach the depth d - 1d−1.
-    
 -   On hitting this depth level(d-1d−1), add the new nodes appropriately to all the nodes in the queuequeue currently, as done in the previous approaches.
-    
 
 ``` java
 /**
@@ -446,14 +423,29 @@ public class Solution {
 ```
 
 **Complexity Analysis**
-
 -   Time complexity : O(n)O(n). A total of nn nodes of the given tree will be considered in the worst case.
     
 -   Space complexity : O(x)O(x). The size of the queuequeue or temptemp queue can grow upto xx only. Here, xx refers to the number of maximum number of nodes at any level in the given tree.
 
+---
 # My Thoughts
+---
 so there is a recurive solution and stuff.
-#Revisit_for_study 
+
+---
+# Time Line
+---
+### [[2022-10-06]]
+
+### [[2022-10-12]]
+
+
+---
+# Tips & Tricks
+---
+
+---
+# Foot Notes
 
 
 

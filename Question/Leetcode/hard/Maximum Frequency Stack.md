@@ -267,7 +267,7 @@ class FreqStack(object):
 ---
 # Tips & Tricks
 ---
-the key to this problem is figuring out how to carry a value over.
+you need to combine two dataStructures to make a better one
 
 
 ---
