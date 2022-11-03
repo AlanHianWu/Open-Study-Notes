@@ -42,9 +42,17 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5bbe88604ff78020",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -90,7 +98,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -110,7 +119,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Question/Leetcode/easy/Adding Binary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +135,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Question/Leetcode/easy/Adding Binary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +156,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Question/Leetcode/easy/Adding Binary.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -161,11 +166,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2706e37e87df7572",
+  "active": "5bbe88604ff78020",
   "lastOpenFiles": [
+    "Question/Leetcode/easy/Adding Binary.md",
     "Question/Leetcode/hard/Maximum Frequency Stack.md",
     "Question/Leetcode/medium/Add One Row to Tree.md",
-    "Question/Leetcode/easy/Adding Binary.md",
     "README.md",
     "assets/images/Pasted image 20220921145921.png",
     "Pasted image 20220921145921.png.md",
