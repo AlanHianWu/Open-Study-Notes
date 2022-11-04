@@ -154,7 +154,7 @@ One could use Bit Manipulation approach to speed up the solution.
 **Algorithm**
 That's a good old classical algorithm, and there is no conversion from binary string to decimal and back here. Let's consider the numbers bit by bit starting from the lowest one and compute the carry this bit will add.
 
-Start from carry = 0. If number a has 1-bit in this lowest bit, add 1 to the carry. The same for number b: if number b has 1-bit in the lowest bit, add 1 to the carry. At this point the carry for the lowest bit could be equal to (00)_2(00)2​, (01)_2(01)2​, or (10)_2(10)2​.
+Start from carry = 0. If number a has 1-bit in this lowest bit, add 1 to the carry. The same for number b: if number b has 1-bit in the lowest bit, add 1 to the carry. At this point the carry for the lowest bit could be equal to $(00)_2(00)2​, (01)_2(01)2​, or (10)_2(10)2​$.
 
 Now append the lowest bit of the carry to the answer, and move the highest bit of the carry to the next order bit.
 
@@ -199,7 +199,6 @@ class Solution:
 #### Approach 2: Bit Manipulation
 
 **Intuition**
-
 Here the input is more adapted to push towards Approach 1, but there is popular Facebook variation of this problem when interviewer provides you two numbers and asks to sum them up without using addition operation.
 
 > No addition? OK, bit manipulation then.
@@ -217,7 +216,6 @@ To find current carry is quite easy as well, it's AND of two input numbers, shif
 Now the problem is reduced: one has to find the sum of answer without carry and carry. It's the same problem - to sum two numbers, and hence one could solve it in a loop with the condition statement "while carry is not equal to zero".
 
 **Algorithm**
-
 -   Convert a and b into integers x and y, x will be used to keep an answer, and y for the carry.
     
 -   While carry is nonzero: `y != 0`:
@@ -232,7 +230,6 @@ Now the problem is reduced: one has to find the sum of answer without carry and 
     
 
 **Implementation**
-
 ``` python
 class Solution:
     def addBinary(self, a, b) -> str:
@@ -256,14 +253,17 @@ class Solution:
 ```
 
 **Performance Discussion**
-
 Here we deal with input numbers which are greater than $2^{100}2100$. That forces to use slow [BigInteger](https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html) in Java, and hence the performance gain will be present for the Python solution only. Provided here Java solution could make its best with Integers or Longs, but not with BigIntegers.
 
 **Complexity Analysis**
-
 -   Time complexity : $\mathcal{O}(N + M)O(N+M)$, where NN and MM are lengths of the input strings a and b.
     
 -   Space complexity : $\mathcal{O}(\max(N, M))O(max(N,M))$ to keep the answer.
+
+---
+# My Thoughts
+---
+
 
 ---
 # Time Line
@@ -272,7 +272,7 @@ Here we deal with input numbers which are greater than $2^{100}2100$. That forc
 ditching this for now tbh. revisit later
 
 ### [[2022-10-02]] 
-this is later, yep still to confusing
+this is later, yep still too confusing
 
 ### [[2022-10-06]]
 not confusing any more
